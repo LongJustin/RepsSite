@@ -1,0 +1,42 @@
+nav {
+	background: #fff;
+}
+
+h1, h4 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#head { 
+	font-size: 20px; 
+	
+	color: #000;
+	position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+}
+
+a, a:hover { 
+	text-decoration: none;
+	color: black; 
+}
+
+.section1 { 
+	background-image: url("img/1.png");
+	color: #fff;  
+	height: 710px;
+	margin-top: 50px;
+	width: 100%;
+}
+
+.section2 { 
+	background: #fff;  
+	width: 100%;
+	border: solid red 1px;
+}
+
+.test { border: solid green 1px; }
