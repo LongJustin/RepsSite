@@ -1,8 +1,100 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding-top: 40px;
+	font-family: 'Nunito', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
 }
+
+header {
+	background: #fff;
+    height: 40px;
+}
+
+header > div {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+a, a:hover { 
+	text-decoration: none;
+	color: black;
+}
+
+#sec1 {
+    color: #fff;
+    background: #71ccd0;
+}
+
+#sec1 * h1 {
+    font-size: 65px;
+    margin: 0 18%;
+}
+
+#sec1 * img {
+    margin: 0 10%;
+}
+
+#sec2 {
+    color: #292929;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.first {
+    font-size: 45px;
+}
+
+.second {
+    font-size: 20px;
+}
+
+.third {
+    text-transform: uppercase;
+}
+
+.fourth {
+    font-size: 24px;
+}
+
+h1, h2, h3, h4, .upcase {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.pad {
+	padding: 30px;
+}
+
+section {
+	padding-top: 35px;
+}
+
+#sec3 {
+	background: #e4e3e3;
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-bottom: 30px;
+}
+
+footer {
+	background: #83d9dc;
+    padding: 35px 15%;
+}
+
+input {
+	background: #83d9dc;
+}
+
+button.submit {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	border: none !important;
+	padding: 5px;
+}
+
+.test { border: solid green 1px; }
