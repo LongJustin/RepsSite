@@ -32,10 +32,6 @@ http.createServer(app).listen(config.get('port'), function(){
     }
 });
 
-app.get('/', function (req, res) {
-    res.render('GET request to the homepage');
-});
-
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
