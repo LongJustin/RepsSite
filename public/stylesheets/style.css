@@ -41,38 +41,32 @@ section:nth-of-type(1) h1{
     font-weight: bold;
 }
 
-.img-text {
-    position: relative;
-}
-
-.content1 {
-    position: absolute;
-    max-height: 20rem;
-    left: 36%;
-    right: 10%;
-    max-width: 50rem;
-}
-
-/*section:nth-of-type(1) img, section:nth-of-type(2) img:last-of-type {
+section:nth-of-type(1) h1 + div {
+    max-width: 60rem;
     margin: auto;
-}*/
-
-.content1 > div {
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 26px;
+    font-size: 28px;
+    line-height: 30px;
 }
 
-.content1 button {
+section:nth-of-type(1) button {
+    position: relative;
     background: #1f8be3;
     color: #fff;
     font-size: 22px;
-    text-align: center;
-    border: none!important;
-    border-radius: 0;
-    margin-top: 30px;
-    margin-left: 15%;
+    margin-bottom: -20%;
+    z-index: 99;
+    transition: 0.5s;
+    border: none;
+}
 
+section:nth-of-type(1) button:hover {
+    background: #1c59a2;
+    color: #fff;
+    transition: 0.5s;
+}
+
+section:nth-of-type(1) img {
+    z-index: 1;
 }
 
 section:nth-of-type(2) {
@@ -83,11 +77,7 @@ section:nth-of-type(2) .row {
     margin: 40px -15px;
 }
 
-section:nth-of-type(2) .pull-left {
-    margin-right: 20px;
-}
-
-section:nth-of-type(2) > div, section:nth-of-type(3) > div, footer > div {
+section:nth-of-type(1) > div, section:nth-of-type(2) > div, section:nth-of-type(3) > div, footer > div {
     max-width: 100rem;
 }
 
@@ -102,10 +92,10 @@ section:nth-of-type(2) .text2 {
     font-size: 20px;
 }
 
-
 section:nth-of-type(2) .text3 {
     text-transform: uppercase;
 }
+
 
 section:nth-of-type(2) .text4 {
     font-size: 20px;
@@ -187,25 +177,9 @@ footer button:hover {
     color: #fff;
 }
 
-#back-top {
-    position:fixed;
-    bottom:30px;
-    left:50%;
-    margin-left:500px
-}
-
-.test {
-    border: solid green 1px;
-}
-.test1 {
-    border: solid red 1px;
-}
-
-@media only screen and (max-width: 1200px) {
-
-}
-
 @media only screen and (max-width: 991px) {
+
+
     section:nth-of-type(2) .text1 {
         text-align: center;
     }
@@ -214,6 +188,11 @@ footer button:hover {
         text-align: center;
         margin-top: 10px;
     }
+
+    section:nth-of-type(2) .row {
+        margin-bottom: 20px;
+    }
+
     footer > div {
         max-width: 70rem;
     }
@@ -223,6 +202,15 @@ footer button:hover {
     section:nth-of-type(1) h1 {
         font-size: 30px;
         line-height: 32px;
+    }
+
+    section:nth-of-type(1) h1 + div {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    section:nth-of-type(1) button {
+        font-size: 18px;
     }
 
     section:nth-of-type(2) {
@@ -239,17 +227,11 @@ footer button:hover {
         font-size: 20px;
 
     }
-    section:nth-of-type(2) .text4 {
-        font-size: 16px;
-        line-height: 18px;
 
-    }
-    .content2 {
-        text-align: center;
-        margin-bottom: 15px;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+    section:nth-of-type(2) .text4 {
+        font-size: 14px;
+        line-height: 16px;
+
     }
 
     section:nth-of-type(3) h1 {
@@ -261,5 +243,17 @@ footer button:hover {
     }
     footer .content2 {
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    section:nth-of-type(1) button {
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    section:nth-of-type(2) .row {
+        margin-bottom: 10px;
     }
 }
