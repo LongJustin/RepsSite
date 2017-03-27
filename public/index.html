@@ -15,23 +15,25 @@
 <body>
 	<header class="navbar navbar-fixed-top text-center">
   	    <div class="container-fluid">
-    	    <div class="link"><a href="#">reps ai</a></div>
+    	    <div class="header"><a href="./index.html">reps ai</a></div>
   	    </div>
 	</header>
 
-	<section>
-		<div class="container-fluid">
+	<section class="blue-section">
+		<div class="container-fluid wrapper">
             <h1 class="text-center">multiply your<br>customer care power</h1>
             <div class="text-center">The most efficient customer care you ever met. Reps AI engine learns from your team's ticketing history over any platform, and offers what we can automate for you.</div>
             <div class="img-txt">
-                    <div class="text-center"><button type="button" class="btn btn-default" id="trial">Start your free trial</button></div>
+                    <div class="text-center">
+						<button type="submit" class="btn btn-default" id="trial">Start your free trial</button>
+					</div>
 					<img src="img/section1.png" class="img-responsive center-block">
             </div>
   	     </div>
 	</section>
 
-	<section>
-		<div class="container-fluid">
+	<section class="white-section">
+		<div class="container-fluid wrapper">
 			<div class="row row-flex">
 				<div class="col-sm-6 col-xs-12">
 					<div class="text1">customers can stop waiting</div>
@@ -59,8 +61,8 @@
 		</div>
 	</section>
 
-	<section>
-		<div class="container-fluid">
+	<section class="grey-section">
+		<div class="container-fluid wrapper">
 			<h1 class="text-center">how it works</h1>
 			<div class="text-center text2">Connect. Analyse. Automate. Reps engine works under the hood lets your team actions teach it. Our engine can extract your bottlenecks, pin point at needed automation and suggest: answers, templates and changes in your process</div>
             <div class="row content">
@@ -81,14 +83,14 @@
 	</section>
 
 	<footer>
-		<div class="container-fluid">
+		<div class="container-fluid wrapper">
 			<div class="row content">
 				<div class="col-sm-6 col-xs-12">
                     <div class="content2">
 					<div class="text1">Contact</div>
                     <br>
 					<div>WE'RE HERE FOR YOU</div>
-					<div><a href="mailto:info@reps.ai">info@reps.ai</a></div>
+					<div><a href="mailto:info@reps.ai" class="link-style">info@reps.ai</a></div>
                     <br>
                     <ul>
                         <li><a href="https://www.facebook.com/repsengine/" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -98,20 +100,26 @@
                     </div>
 				</div>
 				<div class="col-sm-6 col-xs-12">
-					<form>
+					<form role="form" id="emailForm" method="post">
 							<fieldset class="form-group">
-								Name: <input type="text" class="form-control" id="Name" title="name">
+								<label for="Name">Name</label>
+								<input type="text" class="form-control" name="name" id="Name" title="name" required>
 							</fieldset>
 							<fieldset class="form-group">
-								Email: <input type="email" class="form-control" id="Email" title="email">
+								<label for="Email">Email</label>
+								<input type="email" class="form-control" name="email" id="Email" title="email" required>
 							</fieldset>
 							<fieldset class="form-group">
-								Write message: <textarea class="form-control" rows="3" title="message"></textarea>
+								<label for="Message">Message</label>
+								<textarea class="form-control" rows="3" name="message" id="Message" title="message" required></textarea>
 							</fieldset>
-							<div class="text-right"><button type="submit" class="submit">SEND</button></div>
+							<div class="text-right">
+								<button id="Send" type="submit" class="submit">SEND</button>
+								<div id="msg"></div>
+							</div>
 						</form>
 				</div>
-                <div class="col-xs-12"><u>Terms of Use</u>. <u>Privacy Policy</u>. &#169; 2017 by Replies AI ltd. Proudly created in TLV</div>
+                <div class="col-xs-12 info"><a href="./terms.html" class="transition">Terms of Use</a>. <a href="./privacy.html" class="transition">Privacy Policy</a>. &#169; 2017 by Replies AI ltd. Proudly created in TLV</div>
 			</div>
 		</div>
 	</footer>
