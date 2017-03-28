@@ -27,8 +27,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.post('/send', function(req, res) {
-    if (req.body.mail === '' || req.body.subject === '') {
-        res.send("Email & Subject should not be blank");
+    if (req.body.name === '' || req.body.email === '' || req.body.message === '') {
+        res.send("Please fill all fields!");
         return false;
     }
 
@@ -46,13 +46,14 @@ app.post('/send', function(req, res) {
     });
 
     var MailOptions = {
-        from: req.body.mail,
+        from: req.body.name + ' ' + req.body.email,
         to: 'mike@reps.ai',
-        subject: 'Reps AI contact',
-        text: req.body.message
+        subject: 'Reps AI customer contact',
+        text: req.body.email + ' - ' + req.body.message
     };
-    smtpTransport.sendMail(MailOptions, function(error, res) {
+    smtpTransport.sendMail(MailOptions, function(error, response) {
         if (error) {
+            debugger;
             res.send("Email could not be sent due to error:" + error);
         } else {
             res.send("Email has been sent");
@@ -60,34 +61,6 @@ app.post('/send', function(req, res) {
 
     });
 });
-
-
-// Nodemailer try1
-/*var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    secure: false,
-    port: 25,
-    auth: {
-        user: 'longjustn@gmail.com',
-        pass: config.get('password')
-    },
-    tls: {
-        rejectUnauthorized: false
-    }
-});
-
-var MailOptions = {
-    from: '"Michael Umansky" <longjustn@gmail.com',
-    to: 'longjustn@gmail.com',
-    subject: 'Reps AI contact',
-    text: 'Shalom'
-};
-
-transporter.sendMail(MailOptions, function(error, info) {
-    if (error) return console.log(error);
-    console.log("The message was sent");
-    console.log(info);
-});*/
 
 http.createServer(app).listen(config.get('port'), function(){
     console.log('Express server listening on port ' + config.get('port'));

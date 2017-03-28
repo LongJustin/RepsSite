@@ -21,11 +21,11 @@
         return false;
     });
 
-    var fullUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port: '');
+
     $("#Send").click(function(){
         var formData = $("#emailForm").serialize();
         $.ajax ({
-            url: fullUrl + '/send',
+            url: '/send',
             type: 'POST',
             data: formData,
             success: function(result) {
