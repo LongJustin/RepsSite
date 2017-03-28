@@ -21,18 +21,29 @@
         return false;
     });
 
+     $("#emailForm").submit(function(){
+         event.preventDefault();
+     });
 
-    $("#Send").click(function(){
+    $("#Send").click(function(event){
+        var alert = $("#msg");
+        var mail = $("#Email");
+        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+        event.preventDefault();
+        if ($("#Name").val() === '' || mail.val() === '' || $("#Message").val() === '') return alert.text("Please fill all fields!");
+        if (mail.val().search(pattern) !== 0) return alert.text("Enter valid Email!");
+        alert.empty();
+
         var formData = $("#emailForm").serialize();
         $.ajax ({
             url: '/send',
             type: 'POST',
             data: formData,
             success: function(result) {
-                $("#msg").empty().text(result);
+                alert.empty().text(result);
             },
             error: function(err) {
-                $("#msg").empty().text("There is error " + err.status + ", error message: " + err.statusText);
+                alert.empty().text("There is error " + err.status + ", error message: " + err.statusText);
             },
             dataType: "html",
             timeout: 60000

@@ -43,6 +43,10 @@ body {
     padding-left: 20px;
 }
 
+#msg {
+    font-size: 18px;
+}
+
 header a, header a:hover, header a:visited, header a:focus {
     text-decoration: none;
     color: black;

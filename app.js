@@ -53,7 +53,7 @@ app.post('/send', function(req, res) {
     };
     smtpTransport.sendMail(MailOptions, function(error, response) {
         if (error) {
-            debugger;
+
             res.send("Email could not be sent due to error:" + error);
         } else {
             res.send("Email has been sent");
